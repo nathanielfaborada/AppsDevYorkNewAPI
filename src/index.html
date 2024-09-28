@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Styling/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+  </head>
+  <body>
+    <nav>
+
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+       <label class="logo" id="logo"></label>
+       <ul>
+        <li>
+          <a class="active" href="stephen-king.html">Stephen King</a>
+        </li>
+        <li>
+          <a class="active" href="Arts.html">Arts</a>
+        </li>
+       </ul>
+
+    </nav>
+    
+    <div class="card-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" id="best-sellers">Loading... </div>
+          <div class="flip-card-back" id="descriptions">Loading... </div>
+        </div>
+      </div>
+    </div>    
+    <footer>
+
+        <img alt=""
+          src="https://developer.nytimes.com/files/poweredby_nytimes_150a.png?v=1583354208339"
+      />
+      For educational purposes only.
+    </footer>
+ 
+    <script src="hardcover_script.js"></script>
+    
+  </body>
+</html>
