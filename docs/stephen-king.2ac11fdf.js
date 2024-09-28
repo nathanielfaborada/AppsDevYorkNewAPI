@@ -1,18 +1,31 @@
-// Remote = https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=z9vMI8z1dlIkcPAYT255wqx6jrHy86Kh
-const API_Url = "/stephenking.json";
+const API_Url_Remote = "https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=z9vMI8z1dlIkcPAYT255wqx6jrHy86Kh";
+const API_Url_Local = "/stephenking.json";
 const MainLogo = document.getElementById("logo");
 const MainContent = document.getElementById("stephen");
 const GETalldata = async ()=>{
     try {
-        const res = await fetch(API_Url);
+        const res = await fetch(API_Url_Remote);
+        if (!res.ok) throw new Error(`Error fetching from remote: ${res.status}`);
         const data = await res.json();
         return data;
     } catch (e) {
-        alert("An error occurred");
-        console.error(e);
-        return [];
+        console.warn("Fetching remote data failed, switching to local data", e);
+        try {
+            const res = await fetch(API_Url_Local);
+            if (!res.ok) throw new Error(`Error fetching from local: ${res.status}`);
+            const data = await res.json();
+            return data;
+        } catch (error) {
+            alert("An error occurred while fetching local data");
+            console.error(error);
+            return [];
+        }
     }
 };
+(async ()=>{
+    const data = await GETalldata();
+    console.log(data);
+})();
 const updateNAVBAR = (data)=>{
     MainLogo.innerHTML = "";
     const author = data.results && data.results[0] || {
