@@ -1,0 +1,359 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #0082e6;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: #0082e6;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+}
+
+label.logo {
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  margin: 20px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.card-container {
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+}
+
+.flip-card {
+  perspective: 1000px;
+  background-color: #0000;
+  width: 350px;
+  height: 400px;
+}
+
+.flip-card-inner {
+  text-align: center;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  transition: transform .8s;
+  position: relative;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.flip-card-front {
+  color: #000;
+  background-color: #bbb;
+}
+
+.flip-card-front img {
+  width: 350px;
+  height: 400px;
+}
+
+.flip-card-back {
+  color: #fff;
+  background-color: #2980b9;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back h2 {
+  color: #000;
+}
+
+a:hover {
+  background-color: salmon;
+  transition: all .5s;
+}
+
+.checkbtn {
+  color: #fff;
+  float: right;
+  cursor: pointer;
+  margin-right: 40px;
+  font-size: 30px;
+  line-height: 80px;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+footer {
+  color: #000;
+  background-color: #fff;
+  display: flex;
+  bottom: 40px;
+  right: 20px;
+}
+
+@media (width <= 1240px) {
+  label.logo {
+    padding-left: 50px;
+    font-size: 30px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .card-container {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flip-card, .flip-card-front, .flip-card-front img {
+    width: 100%;
+  }
+}
+
+@media (width <= 952px) {
+  label.logo {
+    padding-left: 50px;
+    font-size: 30px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .card-container {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flip-card, .flip-card-front, .flip-card-front img {
+    width: 100%;
+  }
+}
+
+@media (width <= 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    text-align: center;
+    z-index: 1001;
+    background-color: #40494d;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    transition: all .5s;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+  }
+
+  nav ul li {
+    margin: 50px 0;
+    line-height: 30px;
+    display: block;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0%;
+  }
+
+  .card-container {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flip-card, .flip-card-front, .flip-card-front img {
+    width: 100%;
+  }
+}
+
+@media (width <= 490px) {
+  label.logo {
+    padding-left: 50px;
+    font-size: 22px;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    text-align: center;
+    z-index: 1001;
+    background-color: #40494d;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    transition: all .5s;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+  }
+
+  nav ul li {
+    margin: 50px 0;
+    line-height: 10px;
+    display: block;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0%;
+  }
+
+  .card-container {
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flip-card, .flip-card-front, .flip-card-front img {
+    width: 100%;
+  }
+}
+
+@media (width <= 410px) {
+  label.logo {
+    padding-left: 50px;
+    font-size: 18px;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    text-align: center;
+    z-index: 1001;
+    background-color: #40494d;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    transition: all .5s;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+  }
+
+  nav ul li {
+    margin: 50px 0;
+    line-height: 10px;
+    display: block;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0%;
+  }
+
+  .card-container {
+    grid-template-rows: repeat(15, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .flip-card, .flip-card-front, .flip-card-front img {
+    width: 100%;
+  }
+}
+
+@media (width <= 370px) {
+  label.logo {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    text-align: center;
+    z-index: 1001;
+    background-color: #40494d;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    transition: all .5s;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+  }
+
+  nav ul li {
+    margin: 50px 0;
+    line-height: 10px;
+    display: block;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0%;
+  }
+
+  .card-container {
+    grid-template-rows: repeat(15, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .flip-card, .flip-card-front, .flip-card-front img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=index.1dee87bf.css.map */

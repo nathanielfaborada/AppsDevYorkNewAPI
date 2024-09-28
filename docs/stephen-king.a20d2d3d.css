@@ -1,0 +1,139 @@
+.container-2 {
+  background-color: #000;
+  width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-content {
+  text-align: center;
+  text-transform: capitalize;
+  writing-mode: vertical-lr;
+  background-color: #000;
+  background-image: url("https://res.cloudinary.com/diwwqfwjb/image/upload/v1727395550/iS/c9q4tenvj8dipyngzcec.jpg");
+  background-position: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 170px;
+  height: 610px;
+  font-size: 23px;
+  text-decoration: overline;
+  display: inline-block;
+}
+
+.main-content a {
+  color: #fff;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  text-decoration: none;
+  display: flex;
+}
+
+@media (width <= 868px) {
+  .main-content {
+    text-transform: capitalize;
+    writing-mode: horizontal-tb;
+    background-image: none;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    font-size: 23px;
+    text-decoration: overline;
+    display: block;
+  }
+}
+
+@media (width <= 768px) {
+  .main-content {
+    text-transform: capitalize;
+    writing-mode: horizontal-tb;
+    background-image: none;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    font-size: 23px;
+    text-decoration: overline;
+    display: block;
+  }
+}
+
+@media (width <= 625px) {
+  .main-content {
+    text-transform: capitalize;
+    writing-mode: horizontal-tb;
+    background-image: none;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    font-size: 23px;
+    text-decoration: overline;
+    display: block;
+  }
+}
+
+@media (width <= 525px) {
+  .main-content {
+    text-transform: capitalize;
+    writing-mode: horizontal-tb;
+    background-image: none;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    font-size: 23px;
+    text-decoration: overline;
+    display: block;
+  }
+}
+
+@media (width <= 425px) {
+  .main-content {
+    text-transform: capitalize;
+    writing-mode: horizontal-tb;
+    background-image: none;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    font-size: 20px;
+    text-decoration: overline;
+    display: block;
+  }
+}
+
+@media (width <= 410px) {
+  .main-content {
+    text-transform: capitalize;
+    writing-mode: horizontal-tb;
+    background-image: none;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    font-size: 20px;
+    text-decoration: overline;
+    display: block;
+  }
+}
+
+@media (width <= 370px) {
+  .main-content {
+    text-transform: capitalize;
+    writing-mode: horizontal-tb;
+    background-image: none;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    font-size: 18px;
+    text-decoration: overline;
+    display: block;
+  }
+}
+
+footer {
+  color: #000;
+  background-color: #fff;
+}
+/*# sourceMappingURL=stephen-king.a20d2d3d.css.map */
