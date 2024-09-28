@@ -99,7 +99,7 @@
     "parcel": "2.12.0"
   },
   "scripts": {
-    "build": "parcel build --public-url https://nathanielfaborada.github.io/AppsDevYorkNewAPI src/index.html && npx cpx src/Api/arts.json dist/ && npx cpx src/Api/Hardcover_fiction.json dist/ && npx cpx src/Api/stephenking.json dist/",
+    "build": "parcel build --public-url https://nathanielfaborada.github.io/AppsDevYorkNewAPI src/index.html",
     "start": "parcel serve src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -108,3 +108,4 @@
   "license": "ISC",
   "description": ""
 }
+ 
