@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New-York-Times</title>
+    <title>Weather App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    
     <link rel="stylesheet" href="./Styling/style.css">
     
 
@@ -36,9 +37,9 @@
         <div class="text-center md:text-left mb-6 md:mb-0">
           <h1
             class="retro-title text-4xl md:text-6xl mb-2 glitch"
-            data-text="Science Article"
+            data-text="Arts"
           >
-            Science Article
+            Arts
           </h1>
         </div>
 
@@ -50,7 +51,7 @@
           </a>
 
           <!-- Contact -->
-          <a href="Books.html" class="retro-btn px-4 py-2 flex items-center gap-2">
+          <a href="" class="retro-btn px-4 py-2 flex items-center gap-2">
             <i class="fas fa-book"></i>
             
           </a>
@@ -68,17 +69,12 @@
       </div>
     </header>
 
-    <!-- Main Content Science Article-->
+    <!-- Main Content -->
     
-
-    <main class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles">
-      <!-- Articles will be injected here by JS -->
+    <!-- Main Content: Museum Gallery -->
+    <main class="container mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="books-gallery">
+      <!-- Books will be injected here by JS -->
     </main>
-
-
-
-      
-
 
       
 
@@ -89,10 +85,8 @@
       />
       For educational purposes only.
     </footer>
-    <!-- External JS -->
-    <script src="./functional/fetch_articlescience.js"></script>
 
-
+    <script src="./functional/fetch_books.js"></script>
 
   </body>
 
