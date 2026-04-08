@@ -1,4 +1,6 @@
-const apiKey = 'wH1aTA62Rv1D74uPnKlk5kP1VUKEYN03';
+import "dotenv/config";
+
+const apiKey = process.env.NYT_API_KEY;
 const section = 'science';
 const url = `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`;
 const articlesContainer = document.getElementById('articles');

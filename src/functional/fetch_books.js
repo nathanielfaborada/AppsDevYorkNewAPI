@@ -1,4 +1,6 @@
-const apiKey = 'wH1aTA62Rv1D74uPnKlk5kP1VUKEYN03';
+import "dotenv/config";
+
+const apiKey = process.env.NYT_API_KEY;
 const url = `https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=${apiKey}`;
 const gallery = document.getElementById('books-gallery');
 const footer = document.querySelector('footer');

@@ -99,7 +99,7 @@
     "parcel": "2.12.0"
   },
   "scripts": {
-    "build": "parcel build --public-url https://nathanielfaborada.github.io/AppsDevYorkNewAPI src/index.html",
+    "build": "parcel build --public-url https://nathanielfaborada.github.io/appsdev-newyork-times --dist-dir docs src/index.html",
     "start": "parcel serve src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
