@@ -1,5 +1,3 @@
-import "dotenv/config";
-
 const apiKey = process.env.NYT_API_KEY;
 const section = 'science';
 const url = `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`;

@@ -1,0 +1,6 @@
+const t=document.getElementById("articles"),e=document.querySelector("footer");!async function(){try{let l=await fetch("https://api.nytimes.com/svc/topstories/v2/science.json?api-key=wH1aTA62Rv1D74uPnKlk5kP1VUKEYN03");if(!l.ok)throw Error(`HTTP error! Status: ${l.status}`);let r=await l.json();if(r.copyright){let t=document.createElement("p");t.className="text-sm text-gray-400 mt-2",t.textContent=r.copyright,e.appendChild(t)}r.results.filter(t=>t.abstract&&""!==t.abstract.trim()||t.url&&"null"!==t.url).forEach(e=>{let l=document.createElement("div");l.className="article-card";let r="";e.multimedia&&e.multimedia.length>0&&(r=(e.multimedia.find(t=>"mediumThreeByTwo440"===t.format)||e.multimedia[0]).url);let a=`
+        ${r?`<img src="${r}" alt="${e.title}" class="w-full h-48 object-cover mb-4 rounded">`:""}
+        <h2 class="text-xl font-bold mb-2 text-cyan-400">${e.title}</h2>
+        <p class="mb-2">${e.abstract}</p>
+      `;e.url&&"null"!==e.url&&(a+=`<a href="${e.url}" target="_blank" class="text-yellow-400 hover:underline">Read more</a>`),l.innerHTML=a,t.appendChild(l)})}catch(e){console.error("Error fetching top stories:",e),t.innerHTML='<p class="text-red-500">Failed to load articles. Please try again later.</p>'}}();
+//# sourceMappingURL=index.4caa4869.js.map
