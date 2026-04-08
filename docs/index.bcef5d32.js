@@ -1,6 +1,0 @@
-const t=document.getElementById("articles"),e=document.querySelector("footer");!async function(){try{let r=await fetch("https://api.nytimes.com/svc/topstories/v2/science.json?api-key=undefined");if(!r.ok)throw Error(`HTTP error! Status: ${r.status}`);let l=await r.json();if(l.copyright){let t=document.createElement("p");t.className="text-sm text-gray-400 mt-2",t.textContent=l.copyright,e.appendChild(t)}l.results.filter(t=>t.abstract&&""!==t.abstract.trim()||t.url&&"null"!==t.url).forEach(e=>{let r=document.createElement("div");r.className="article-card";let l="";e.multimedia&&e.multimedia.length>0&&(l=(e.multimedia.find(t=>"mediumThreeByTwo440"===t.format)||e.multimedia[0]).url);let a=`
-        ${l?`<img src="${l}" alt="${e.title}" class="w-full h-48 object-cover mb-4 rounded">`:""}
-        <h2 class="text-xl font-bold mb-2 text-cyan-400">${e.title}</h2>
-        <p class="mb-2">${e.abstract}</p>
-      `;e.url&&"null"!==e.url&&(a+=`<a href="${e.url}" target="_blank" class="text-yellow-400 hover:underline">Read more</a>`),r.innerHTML=a,t.appendChild(r)})}catch(e){console.error("Error fetching top stories:",e),t.innerHTML='<p class="text-red-500">Failed to load articles. Please try again later.</p>'}}();
-//# sourceMappingURL=index.bcef5d32.js.map
