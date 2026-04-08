@@ -11,7 +11,6 @@ async function fetchBooks() {
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
     const data = await response.json();
 
-    // Insert copyright dynamically
     if (data.copyright) {
       const copyrightElem = document.createElement('p');
       copyrightElem.className = 'text-sm text-gray-400 mt-2';
